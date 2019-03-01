@@ -20,7 +20,8 @@ function wp_trim_content_to_character( $text, $num_char = 50, $more = null ) {
 	if ( strlen( $text ) < $num_char ) {
 		$text = $text . $more;
 	} else {
-		$text = substr( $text, 0, strpos( $text, ' ', $num_char ) );
+		$offset  = ( $num_char - strlen( $more ) ) - strlen( $content );
+		$text = substr( $text, 0, strrpos( $text, ' ', $offset ) );
 		$text = $text . $more;
 	}
 	return $text;
