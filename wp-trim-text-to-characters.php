@@ -2,11 +2,11 @@
 /**
  * Return trimmed text to certain character length
  *
- * @param $text text to be trimmed
- * @param int $num_char numbber of characters
- * @param null $more more text. default is '...'
+ * @param $text
+ * @param int $num_char
+ * @param null $more
  *
- * @return string trimmed text
+ * @return bool|string
  */
 function wp_trim_content_to_character( $text, $num_char = 50, $more = null ) {
 
